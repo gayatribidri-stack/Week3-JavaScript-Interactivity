@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Student Task Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">TaskPlanner</a>
+
+            <a href="#tasks" class="nav-link">My Tasks</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">PLAN • ORGANIZE • ACHIEVE</p>
+
+                <h1>Make Every Day <span>Productive.</span></h1>
+
+                <p class="hero-text">
+                    Organize your daily activities, track your progress,
+                    and complete your tasks one step at a time.
+                </p>
+
+                <a href="#tasks" class="primary-button">
+                    Manage My Tasks
+                </a>
+            </div>
+        </section>
+
+        <!-- Task Planner Section -->
+        <section id="tasks" class="task-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">YOUR PERSONAL PLANNER</p>
+                <h2>My Task Manager</h2>
+                <p>Add tasks, mark them complete, or remove them when needed.</p>
+            </div>
+
+            <!-- Task Input Form -->
+            <form id="task-form" class="task-form">
+                <label for="task-input">What do you need to do?</label>
+
+                <div class="input-row">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Enter a task..."
+                        maxlength="100"
+                        autocomplete="off"
+                    >
+
+                    <button type="submit" class="primary-button">
+                        Add Task
+                    </button>
+                </div>
+
+                <p id="form-message" class="form-message" aria-live="polite"></p>
+            </form>
+
+            <!-- Task Statistics -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <span class="stat-number" id="total-count">0</span>
+                    <span class="stat-label">Total Tasks</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number" id="completed-count">0</span>
+                    <span class="stat-label">Completed</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number" id="remaining-count">0</span>
+                    <span class="stat-label">Remaining</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Task List -->
+            <div class="task-list-heading">
+                <h3>Your Tasks</h3>
+                <button type="button" id="clear-completed" class="text-button">
+                    Clear Completed
+                </button>
+            </div>
+
+            <ul id="task-list" class="task-list"></ul>
+
+            <p id="empty-message" class="empty-message">
+                No tasks yet. Add your first task above!
+            </p>
+
+        </section>
+
+        <!-- Information Section -->
+        <section class="tips-section">
+            <div>
+                <p class="eyebrow">A SMALL REMINDER</p>
+                <h2>Progress starts with one task.</h2>
+            </div>
+
+            <p>
+                Break your work into smaller tasks, stay consistent,
+                and celebrate every step forward.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 TaskPlanner | Built with HTML, CSS and JavaScript</p>
+    </footer>
+
+</body>
+</html>
